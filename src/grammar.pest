@@ -6,6 +6,9 @@ bin_op = _{ add | subtract | multiply | divide }
 	subtract = { "-" }
 	multiply = { "*" }
 	divide = { "/" }
+	modulo = { "%" }
+
+expr = { atom ~ (bin_op ~ atom)* }
 
 unary_minus = { "-" }
 
