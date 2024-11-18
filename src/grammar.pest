@@ -9,7 +9,7 @@ bin_op = _{ add | subtract | multiply | divide }
 	multiply = { "*" }
 	divide = { "/" }
 
-expr = { atom ~ (bin_op ~ atom)* }
+expr = _{ integer | "(" ~ expr ~ ")" }
 
 WHITESPACE = _{ " " }
 
